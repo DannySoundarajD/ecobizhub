@@ -1,0 +1,154 @@
+.add-edit-product-form {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Poppins', sans-serif;
+}
+
+.add-edit-product-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 600;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+/* --- Form elements --- */
+.add-edit-product-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form rows */
+}
+
+/* --- Labels --- */
+.add-edit-product-form label {
+    font-weight: 500;
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* --- Input fields and textarea --- */
+.add-edit-product-form input[type="text"],
+.add-edit-product-form input[type="number"],
+.add-edit-product-form textarea,
+.add-edit-product-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    background-color: #fff;
+    color: #333;
+    font-family: inherit;
+}
+
+.add-edit-product-form input[type="text"]:focus,
+.add-edit-product-form input[type="number"]:focus,
+.add-edit-product-form textarea:focus,
+.add-edit-product-form select:focus {
+    outline: none;
+    border-color: #a0d2eb; /* A nice light blue focus color */
+    box-shadow: 0 0 8px rgba(160, 210, 235, 0.6);
+}
+
+.add-edit-product-form textarea {
+    resize: vertical; /* Allows vertical resizing */
+    min-height: 120px;
+}
+
+/* --- Select dropdown styling --- */
+.add-edit-product-form select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-6.5H18.6c-4.9%200-9.2%201.8-13.2%206.5-4%204-6.5%209.2-6.5%2015%200%205.8%202.5%2011%206.5%2015l129.4%20129.4c4%204%209.2%206.5%2015%206.5s11-2.5%2015-6.5L287%2099.4c4-4%206.5-9.2%206.5-15s-2.5-11-6.5-15z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 35px; /* Make space for the custom arrow */
+}
+
+/* Disable a select option */
+.add-edit-product-form select option[disabled] {
+    color: #999;
+}
+
+/* --- Buttons container --- */
+.add-edit-product-form .button-group {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+/* --- Buttons --- */
+.add-edit-product-form button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.add-edit-product-form button[type="submit"] {
+    background-color: #007bff; /* Primary blue */
+    color: white;
+}
+
+.add-edit-product-form button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.add-edit-product-form button[type="button"] {
+    background-color: #6c757d; /* Secondary gray for cancel */
+    color: white;
+}
+
+.add-edit-product-form button[type="button"]:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.4);
+}
+
+/* --- Responsive design for smaller screens --- */
+@media (max-width: 900px) {
+    .add-edit-product-form {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .add-edit-product-form {
+        padding: 20px;
+    }
+
+    .add-edit-product-form h2 {
+        font-size: 1.8em;
+    }
+
+    .add-edit-product-form button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .add-edit-product-form .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

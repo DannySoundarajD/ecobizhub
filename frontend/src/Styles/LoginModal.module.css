@@ -1,0 +1,178 @@
+/* LoginModal.module.css */
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Ensure it's above everything */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modalOverlay.isOpen {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modalContent {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalOverlay.isOpen .modalContent {
+    transform: translateY(0);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.modalHeader h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 700;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+    color: #333;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.errorMessage {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.inputGroup label {
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.inputGroup input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.inputGroup input:focus {
+    outline: none;
+    border-color: #0f3460; /* Primary color from your footer */
+    box-shadow: 0 0 0 3px rgba(15, 52, 96, 0.1);
+}
+
+.loginButton {
+    background-color: #0f3460; /* Primary color */
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.loginButton:hover:not(:disabled) {
+    background-color: #16213e; /* Darker blue */
+    transform: translateY(-1px);
+}
+
+.loginButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.modalFooter {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.modalFooter p {
+    margin: 0 0 8px 0;
+}
+
+.signupLink,
+.forgotPasswordLink {
+    color: #64b3f4; /* Accent color from your footer */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.signupLink:hover,
+.forgotPasswordLink:hover {
+    color: #0f3460; /* Darker primary color on hover */
+    text-decoration: underline;
+}
+
+/* Optional: Add an animation for the modal appearance */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.modalOverlay.isOpen .modalContent {
+    animation: slideIn 0.3s ease-out forwards;
+}

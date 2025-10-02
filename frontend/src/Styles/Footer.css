@@ -1,0 +1,400 @@
+/* ModernFooter.css */
+
+.modern-footer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.footer-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  padding: 40px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Company Info Section */
+.company-info {
+  grid-column: span 1;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+  background: linear-gradient(45deg, #64b3f4, #c2e59c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.company-description {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.social-link.facebook:hover { background: #1877f2; }
+.social-link.instagram:hover { background: #e4405f; }
+.social-link.twitter:hover { background: #1da1f2; }
+.social-link.linkedin:hover { background: #0077b5; }
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Footer Sections */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #64b3f4, #c2e59c);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-link {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #64b3f4;
+}
+
+/* Contact & Apps Section */
+.contact-apps {
+  gap: 24px;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+  color: #64b3f4;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.app-downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-label {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  font-weight: 500;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.app-button {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 8px;
+  left: 30%;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.app-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.app-icon {
+  width: 30px;
+  height: 16px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.payment-methods {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.payment-label {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.payment-icon {
+  width: 32px;
+  height: 20px;
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
+}
+
+.payment-icon:hover {
+  filter: grayscale(0);
+}
+
+.payment-icon.visa { color: #1a1f71; }
+.payment-icon.mastercard { color: #eb001b; }
+.payment-icon.paypal { color: #003087; }
+
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.copyright p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #b0b0b0;
+}
+
+.legal-links {
+  display: flex;
+  gap: 16px;
+}
+
+.legal-link {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.legal-link:hover {
+  color: #64b3f4;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(45deg, #64b3f4, #c2e59c);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-to-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .footer-content {
+    padding: 30px 0 15px;
+  }
+  
+  .company-info {
+    text-align: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .payment-methods {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .copyright {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .app-buttons {
+    flex-direction: column;
+    position: relative;
+    right: 90px;
+  }
+  
+
+  .app-button {
+    justify-content: center;
+
+  }
+  
+  .scroll-to-top {
+    width: 44px;
+    height: 44px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .scroll-to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 16px;
+  }
+  
+  .company-name {
+    font-size: 1.3rem;
+  }
+  
+  .section-title {
+    font-size: 1rem;
+  }
+  
+  .footer-content {
+    padding: 24px 0 12px;
+  }
+  
+  .footer-bottom {
+    padding: 16px 0;
+  }
+}
