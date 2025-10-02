@@ -2,10 +2,6 @@
 
 EcoBizHub is a **web-based marketplace** built using the **MERN Stack** to empower **MSMEs and rural entrepreneurs**. It enables sellers to showcase eco-friendly and sustainable products, customers to shop seamlessly, and admins to manage the overall ecosystem.
 
-## 🌐 Live Demo
-
-**Check out the live deployment:** **[https://ecobizhub.onrender.com](https://ecobizhub.onrender.com)**
-
 ---
 
 ## ✨ Key Features
@@ -45,5 +41,4 @@ Follow these instructions to set up the project locally for development and test
 
 #### 1. Clone the Repository
 ```bash
-git clone https://github.com/YourOrg/EcoBizHub.git
-cd EcoBizHub
+git clone https://github.com/DannySoundarajD/ecobizhub.git
